@@ -1,2 +1,2 @@
-# ws-client-proxy-soap
-İZİBİZ Proxy SOAPUI Örneği
+# ws-client-soapui
+İZİBİZ Webservice Entegrasyon - SOAPUI
