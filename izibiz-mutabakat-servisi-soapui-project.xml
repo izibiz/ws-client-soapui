@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2c3d2008-dcab-4145-b37d-8eb735ace595" activeEnvironment="Default" name="izibiz-mutabakat-servisi" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d5cb9361-bb61-41e7-80d2-203581ba93a7" wsaVersion="NONE" name="ReconciliationPortBinding" type="wsdl" bindingName="{http://schemas.izibiz.com/ei/wsdl/reconciliation}ReconciliationPortBinding" soapVersion="1_1" anonymous="optional" definition="https://efaturatest.izibiz.com.tr/Reconciliation?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://efaturatest.izibiz.com.tr/Reconciliation?wsdl"><con:part><con:url>https://efaturatest.izibiz.com.tr/Reconciliation?wsdl</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown.-->
+<wsdl:definitions name="Reconciliation" targetNamespace="http://schemas.izibiz.com/ei/wsdl/reconciliation" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.izibiz.com/ei/wsdl/reconciliation">
+  <!--TYPES-->
+  <wsdl:types>
+    <xsd:schema>
+      <xsd:import namespace="http://schemas.izibiz.com/ei/wsdl/reconciliation" schemaLocation="https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=4"/>
+    </xsd:schema>
+  </wsdl:types>
+  <!--MESSAGE-->
+  <wsdl:message name="SendReconciliationRequestMessage">
+    <wsdl:part name="request" element="tns:SendReconciliationRequest"/>
+  </wsdl:message>
+  <wsdl:message name="SendReconciliationResponseMessage">
+    <wsdl:part name="response" element="tns:SendReconciliationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetReconciliationStatusRequestMessage">
+    <wsdl:part name="request" element="tns:GetReconciliationStatusRequest"/>
+  </wsdl:message>
+  <wsdl:message name="GetReconciliationStatusResponseMessage">
+    <wsdl:part name="response" element="tns:GetReconciliationStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SendMailReconciliationRequestMessage">
+    <wsdl:part name="request" element="tns:SendMailReconciliationRequest"/>
+  </wsdl:message>
+  <wsdl:message name="SendMailReconciliationResponseMessage">
+    <wsdl:part name="response" element="tns:SendMailReconciliationResponse"/>
+  </wsdl:message>
+  <!--FAULT-->
+  <wsdl:message name="RequestFaultMessage">
+    <wsdl:part name="parameters" element="tns:RequestFault"/>
+  </wsdl:message>
+  <!--PORT-->
+  <wsdl:portType name="ReconciliationPort">
+    <wsdl:operation name="SendReconciliation">
+      <wsdl:input message="tns:SendReconciliationRequestMessage"/>
+      <wsdl:output message="tns:SendReconciliationResponseMessage"/>
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetReconciliationStatus">
+      <wsdl:input message="tns:GetReconciliationStatusRequestMessage"/>
+      <wsdl:output message="tns:GetReconciliationStatusResponseMessage"/>
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailReconciliation">
+      <wsdl:input message="tns:SendMailReconciliationRequestMessage"/>
+      <wsdl:output message="tns:SendMailReconciliationResponseMessage"/>
+      <wsdl:fault name="RequestFault" message="tns:RequestFaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <!--BINDING-->
+  <wsdl:binding name="ReconciliationPortBinding" type="tns:ReconciliationPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SendReconciliation">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault name="RequestFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetReconciliationStatus">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault name="RequestFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SendMailReconciliation">
+      <soap:operation soapAction=""/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="RequestFault">
+        <soap:fault name="RequestFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <!--SERVICE-->
+  <wsdl:service name="Reconciliation">
+    <wsdl:port name="ReconciliationPort" binding="tns:ReconciliationPortBinding">
+      <soap:address location="https://efaturatest.izibiz.com.tr:443/Reconciliation"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=4</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown.-->
+<xsd:schema targetNamespace="http://schemas.izibiz.com/ei/wsdl/reconciliation" xmlns="http://schemas.izibiz.com/ei/wsdl/reconciliation" xmlns:e="http://schemas.i2i.com/ei/entity" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pck="http://www.efatura.gov.tr/package-namespace" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:hr="http://www.hr-xml.org/3" xmlns:c="http://schemas.i2i.com/ei/common">
+  <xsd:import namespace="http://schemas.i2i.com/ei/common" schemaLocation="https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=1"/>
+  <xsd:import namespace="http://schemas.i2i.com/ei/entity" schemaLocation="https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=2"/>
+  <xsd:import namespace="http://www.w3.org/2005/05/xmlmime" schemaLocation="https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=3"/>
+  <!--===========================================================-->
+  <xsd:complexType name="OIBOperation">
+    <xsd:sequence>
+      <xsd:element name="RequestFaultResponse" type="e:REQUEST_ERRORType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--===========================================================-->
+  <xsd:element name="RequestFault" type="RequestFaultType"/>
+  <xsd:complexType name="RequestFaultType">
+    <xsd:sequence>
+      <xsd:element name="RequestFaultResponse" type="e:REQUEST_ERRORType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--===========================================================-->
+  <xsd:element name="SendReconciliationRequest" type="SendReconciliationRequest"/>
+  <xsd:complexType name="SendReconciliationRequest">
+    <xsd:complexContent>
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="RECONCILIATION" minOccurs="1" maxOccurs="unbounded">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="TYPE" type="RECONCILIATION_TYPE" minOccurs="1"/>
+                <xsd:element name="UUID" type="xsd:string" minOccurs="1"/>
+                <xsd:element name="CUSTOMER_IDENTIFIER" type="xsd:normalizedString" minOccurs="1"/>
+                <xsd:element name="COMMERCIAL_NAME" type="xsd:normalizedString" minOccurs="1"/>
+                <xsd:element name="TAX_OFFICE" type="xsd:normalizedString" minOccurs="0"/>
+                <xsd:element name="CUSTOMER_ADDRESS" type="xsd:string" minOccurs="1"/>
+                <xsd:element name="TELEPHONE_NO" type="xsd:normalizedString" minOccurs="0"/>
+                <xsd:element name="FAX_NO" type="xsd:normalizedString" minOccurs="0"/>
+                <xsd:element name="EMAIL" type="xsd:normalizedString" minOccurs="1"/>
+                <xsd:element name="CURRENCY_CODE" type="CURRENCY_CODE" minOccurs="1"/>
+                <xsd:element name="BABS_ACCOUNTING_PERIOD" type="xsd:normalizedString" minOccurs="0"/>
+                <xsd:element name="BA_DOCUMENT_COUNT" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="BA_DOCUMENT_AMOUNT" type="xsd:decimal" minOccurs="0"/>
+                <xsd:element name="BS_DOCUMENT_COUNT" type="xsd:int" minOccurs="0"/>
+                <xsd:element name="BS_DOCUMENT_AMOUNT" type="xsd:decimal" minOccurs="0"/>
+                <xsd:element name="CM_DATE" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="CM_AMOUNT_TYPE" type="CM_TYPE" minOccurs="0"/>
+                <xsd:element name="CM_AMOUNT" type="xsd:decimal" minOccurs="0"/>
+                <xsd:element name="NOTE" type="xsd:normalizedString" minOccurs="0"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SendReconciliationResponse" type="SendReconciliationResponse"/>
+  <xsd:complexType name="SendReconciliationResponse">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_RETURN" type="e:REQUEST_RETURNType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--===========================================================-->
+  <xsd:element name="GetReconciliationStatusRequest" type="GetReconciliationStatusRequest"/>
+  <xsd:complexType name="GetReconciliationStatusRequest">
+    <xsd:complexContent>
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="RECONCILIATION_SEARCHING">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="UUID" type="xsd:normalizedString" minOccurs="1" maxOccurs="unbounded"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="GetReconciliationStatusResponse" type="GetReconciliationStatusResponse"/>
+  <xsd:complexType name="GetReconciliationStatusResponse">
+    <xsd:sequence>
+      <xsd:element name="RECONCILIATION_STATUS" type="RECONCILIATION_STATUS" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--===========================================================-->
+  <xsd:element name="SendMailReconciliationRequest" type="SendMailReconciliationRequest"/>
+  <xsd:complexType name="SendMailReconciliationRequest">
+    <xsd:complexContent>
+      <xsd:extension base="e:REQUEST">
+        <xsd:sequence>
+          <xsd:element name="MAIL_SEARCHING">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="UUID" type="xsd:normalizedString" minOccurs="1" maxOccurs="unbounded"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SendMailReconciliationResponse" type="SendMailReconciliationResponse"/>
+  <xsd:complexType name="SendMailReconciliationResponse">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_RETURN" type="e:REQUEST_RETURNType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RECONCILIATION_STATUS">
+    <xsd:sequence>
+      <xsd:element name="RECONCILIATION" minOccurs="1" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="TYPE" type="RECONCILIATION_TYPE" minOccurs="0"/>
+            <xsd:element name="UUID" type="xsd:normalizedString"/>
+            <xsd:element name="CUSTOMER_IDENTIFIER" type="xsd:normalizedString" minOccurs="1"/>
+            <xsd:element name="COMMERCIAL_NAME" type="xsd:normalizedString" minOccurs="1"/>
+            <xsd:element name="BABS_ACCOUNTING_PERIOD" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="CM_DATE" type="xsd:dateTime" minOccurs="0"/>
+            <xsd:element name="CM_AMOUNT_TYPE" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="STATUS" type="xsd:normalizedString" minOccurs="1"/>
+            <xsd:element name="STATUS_CODE" type="xsd:normalizedString" minOccurs="1"/>
+            <xsd:element name="CREATE_DATE" type="xsd:dateTime" minOccurs="1"/>
+            <xsd:element name="EMAIL" type="EMAIL" minOccurs="0" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="EMAIL">
+    <xsd:sequence>
+      <xsd:element name="EMAIL_STATUS" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="STATUS" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="STATUS_CODE" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="SEND_DATE" type="xsd:dateTime" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EMAIL_EVENTS" minOccurs="1" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="EVENT" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="DIAG" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="IP_ADDRESS" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="COUNTRY" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="REGION" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="CITY" type="xsd:normalizedString" minOccurs="0"/>
+            <xsd:element name="EVENT_DATE" type="xsd:dateTime" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--===========================================================-->
+  <xsd:simpleType name="CM_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="A"/>
+      <xsd:enumeration value="B"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="RECONCILIATION_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="EM"/>
+      <xsd:enumeration value="CM"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CURRENCY_CODE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="TRY"/>
+      <xsd:enumeration value="USD"/>
+      <xsd:enumeration value="EUR"/>
+      <xsd:enumeration value="GBP"/>
+      <xsd:enumeration value="CAD"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=1</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown.-->
+<!--edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg)-->
+<!--edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by bt (home)-->
+<!--generated by perl script pipedelimitedToAscii.pl-->
+<xs:schema targetNamespace="http://schemas.i2i.com/ei/common" xmlns="http://schemas.i2i.com/ei/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+  <!--COMMON HELPER ENTITIES-->
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+  <xs:complexType name="CHANGE_INFOType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Contains information related to
+				either Creation or Modification</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CDATE" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Create Date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CPOSITION_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Create Position ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CUSER_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Create User ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UDATE" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Update Date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UPOSITION_ID" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Update Position ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UUSER_ID" type="xs:long" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Update User ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AMOUNTType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Contains price type</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="AMOUNT" type="xs:double">
+        <xs:annotation>
+          <xs:documentation>Charge amount.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CURRENCY_CODE" type="ISO_CURRENCY_CODEType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>See ISO_CURRENCY_CODE Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VALIDITY_PERIODType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Contains validity period info for
+				related entity</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SDATE" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Validity start date of the entity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EDATE" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Validity end date of the entity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ENTITYType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; defines basic properties for a
+				business entity</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="FILESET" type="FILESETType" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>See FILESET type</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="COMMENTSET" type="COMMENTSETType" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>See COMMENTSET type</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FILEType">
+    <xs:annotation>
+      <xs:documentation>Holds File Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="CREATE_USER_INFO" minOccurs="0">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FIRST_NAME">
+                  <xs:annotation>
+                    <xs:documentation>First name</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:maxLength value="256"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="LAST_NAME">
+                  <xs:annotation>
+                    <xs:documentation>Last name</xs:documentation>
+                  </xs:annotation>
+                  <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                      <xs:maxLength value="64"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="FILENAME">
+            <xs:annotation>
+              <xs:documentation>Filename</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:maxLength value="256"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="FILETYPE" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Defines filetype such as PDF, XSL etc.</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:maxLength value="10"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="OPERATION_CODE" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>Operation Code</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:token">
+                <xs:maxLength value="32"/>
+                <xs:minLength value="1"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="CONTENT" type="xs:anyType" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>This is the content of the file</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="INTL_TXN_ID" type="xs:long" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>INTL TXN ID if related to a Workflow</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="FILESETType">
+    <xs:annotation>
+      <xs:documentation>Holds File Set Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="FILE_SET_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>Unique ID indicating a set of files. If NOT
+								defined may be set to -1</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="FILE" type="FILEType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Files</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="COMMENTType">
+    <xs:annotation>
+      <xs:documentation>Holds Comment Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="COMMENT_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>Comment Internal ID. -1 if NOT defined</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="COMMENT">
+            <xs:annotation>
+              <xs:documentation>Comment</xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="1024"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="INTL_TXN_ID" type="xs:long" minOccurs="0">
+            <xs:annotation>
+              <xs:documentation>INTL TXN ID if related to a Workflow</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="COMMENTSETType">
+    <xs:annotation>
+      <xs:documentation>Holds Comment Set Info</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ENTITYBaseType">
+        <xs:sequence>
+          <xs:element name="COMMENT_SET_ID" type="xs:long">
+            <xs:annotation>
+              <xs:documentation>Unique ID indicating a set of comments. If not
+								defined may be set to -1</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="COMMENT" type="COMMENTType" minOccurs="0" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Comments</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SEARCH_KEYType">
+    <xs:annotation>
+      <xs:documentation>Base type used for search keys</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="VALID_FROM" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Valid From</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="VALID_TO" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Valid To</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ROWNUM_OFFSET" type="xs:int" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>For searches that may return many rows, this
+						parameters specifies the starting rownum of query to be returned
+						by BACKEND system</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ROWNUM_LIMIT" type="xs:int" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>For searches that may return many rows, this
+						parameters specifies the maximum rownums to be returned starting
+						with ROWNUM_OFFSET</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SEARCH_RESULTType">
+    <xs:annotation>
+      <xs:documentation>Base type used for all search results</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ROWNUM_TOTAL" type="xs:int" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Specifies the total number of rows returned</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FIND_KEYType">
+    <xs:annotation>
+      <xs:documentation>Base type used for search keys</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="DATETIME" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>DateTime of Inquire.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="VISIBILITY_TYPE" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Visibility Type</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="PERSON"/>
+            <xs:enumeration value="POSITION"/>
+            <xs:enumeration value="POSITION_TYPE"/>
+            <xs:enumeration value="PEER"/>
+            <xs:enumeration value="TEAM"/>
+            <xs:enumeration value="ORGANIZATION"/>
+            <xs:enumeration value="ADMIN"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LOV_VALUEType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Holds LOV Value Type</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="LOV_ID" type="xs:long">
+        <xs:annotation>
+          <xs:documentation>Indicates list of value ID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LOV_CODE" default="'N'" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>LOV Internal CODE</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:maxLength value="64"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ISO_CURRENCY_CODEType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Holds LOV Value Type</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="LOV_VALUEType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ATTRIBUTESTYPE">
+    <xs:annotation>
+      <xs:documentation>A generic name/value Attributes type</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="xs:anyType">
+        <xs:attribute name="NAME" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="64"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="STRINGType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; The set of strings that do not
+				contain the carriage return, line feed nor tab characters, that have
+				no leading or trailing spaces and that have no internal sequences of
+				two or more spaces.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token"/>
+  </xs:simpleType>
+  <xs:simpleType name="MSISDNType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Telephone Number of mobile phone;
+				acronym for Mobile Station Integrated Services Digital Network</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="5[0-9]{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TELNOType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Telephone Number</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[1-9][0-9]{9}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GLOBALTELNOType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Telephone Number of mobile phone in
+				long format</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{10,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IPV4Type">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; IP Address type in V4 format</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-2]?[0-9]?[0-9]\.[0-2]?[0-9]?[0-9]\.[0-2]?[0-9]?[0-9]\.[0-2]?[0-9]?[0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IPV6Type">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; IP Address type in V6 format</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9A-F]{1,4}:[0-9A-F]{1,4}:[0-9A-F]{1,4}:[0-9A-F]{1,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BOOLEANType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; Boolean type one of case insensitive
+				"Y","N","1","0","true","false" indication true, false respectively</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="([YyNn01Xx_]|true|false){1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CURRENCYType">
+    <xs:annotation>
+      <xs:documentation>Helper entity; type for currency; typically float
+				or double</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:double"/>
+  </xs:simpleType>
+  <xs:simpleType name="URLType">
+    <xs:annotation>
+      <xs:documentation>Helper entity; Simple type for URL validity check</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="(https?|ftp|file).*"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TAXNOType">
+    <xs:annotation>
+      <xs:documentation>Helper entity; TAX No</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{10,11}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IBANType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; IBAN</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Z]{2}[0-9]{2}[A-Z0-9]{5}[A-Z0-9]{1}[A-Z0-9]{16}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="POSTCODEType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; EMAIL address</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[0-9]{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EMAILType">
+    <xs:annotation>
+      <xs:documentation>Helper Entity; EMAIL address</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[-_a-zA-Z0-9]+(\.[-_a-zA-Z0-9]+)*@[-a-zA-Z0-9]+(\.[-a-zA-Z0-9]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,10}))"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ENTITYBaseType">
+    <xs:sequence>
+      <xs:element name="EL_ACTION" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Requested Elementary Action:C, R, U or D</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:maxLength value="1"/>
+            <xs:pattern value="[CRUDScruds]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="VALIDITY_PERIOD" type="VALIDITY_PERIODType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>See VALIDITY_PERIOD type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CHANGE_INFO" type="CHANGE_INFOType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>See CHANGE_INFO type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ACCESS_CONTROL_INFO" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>See ACCESS_CONTROL_INFO type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=2</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown.-->
+<!--edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg)-->
+<!--edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by bt (home)-->
+<!--generated by perl script pipedelimitedToAscii.pl-->
+<xsd:schema targetNamespace="http://schemas.i2i.com/ei/entity" xmlns="http://schemas.i2i.com/ei/entity" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:c="http://schemas.i2i.com/ei/common">
+  <xsd:import namespace="http://schemas.i2i.com/ei/common" schemaLocation="https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=1"/>
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+  <!--REQUEST INFO ENTITIES-->
+  <!--*************************************************************-->
+  <!--*************************************************************-->
+  <xsd:complexType name="REQUEST">
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="REQUEST_HEADERType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_HEADERType">
+    <xsd:annotation>
+      <xsd:documentation>Request related information context including data
+				such as SESSION_ID, INTL_TXN_ID etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="SESSION_ID" type="xsd:token" minOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CLIENT_TXN_ID" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="INTL_TXN_ID" type="xsd:long" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Internal Transaction ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="INTL_PARENT_TXN_ID" type="xsd:long" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Parent Transaction ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ACTION_DATE" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Action Date provided by client system</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CHANGE_INFO" type="c:CHANGE_INFOType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>See CHANGE_INFO type</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="REASON" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Reason of the Action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="APPLICATION_NAME" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Application Name</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="HOSTNAME" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Initiating host name or IP address</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CHANNEL_NAME" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain channel name of the action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="SIMULATION_FLAG" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>A true or yes indicates that the request will be
+						executed but not committed</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="COMPRESSED" type="xsd:token" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indicates parent message contains compressed
+						content</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ATTRIBUTES" type="c:ATTRIBUTESTYPE" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Attributes array that composed by name-value
+						pairs using for information manners.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_RETURNType">
+    <xsd:annotation>
+      <xsd:documentation>Request response related context information
+				including data such as RETURN_CODE, DETAILED_RESULT
+				information etc.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="INTL_TXN_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Internal TXN ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CLIENT_TXN_ID" minOccurs="0" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="RETURN_CODE" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Numeric return code of the action. 0: success,
+						negative: failure, positive: success with warning</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="WARNINGS" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_ERRORType">
+    <xsd:annotation>
+      <xsd:documentation>This will be fault type</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="INTL_TXN_ID" type="xsd:long">
+        <xsd:annotation>
+          <xsd:documentation>Internal TXN ID</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CLIENT_TXN_ID" minOccurs="0" type="xsd:token">
+        <xsd:annotation>
+          <xsd:documentation>Initiating domain Transaction ID of the action</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ERROR_CODE" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Error Code</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ERROR_SHORT_DES" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Error Short Description</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ERROR_LONG_DES" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Error Long Description</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="STACKTRACE" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>This is printStackTrace output...</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ERROR_ELEMENT_INDEX" type="xsd:int" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>In case of multiple requests this is the failing
+						element index</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="REQUEST_INFOType">
+    <xsd:annotation>
+      <xsd:documentation>Detailed Information about the status of a request</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="REQUEST_HEADER" type="REQUEST_HEADERType">
+        <xsd:annotation>
+          <xsd:documentation>See REQUEST_HEADER type</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="REQUEST_RETURN" type="REQUEST_RETURNType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>See REQUEST_RETURNType</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="REQUEST_ERROR" type="REQUEST_ERRORType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>See REQUEST_ERRORType</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>https://efaturatest.izibiz.com.tr:443/Reconciliation?xsd=3</con:url><con:content><![CDATA[<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown.-->
+<xs:schema targetNamespace="http://www.w3.org/2005/05/xmlmime" version="1.0" xmlns:tns="http://www.w3.org/2005/05/xmlmime" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="base64Binary">
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute ref="tns:contentType"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="hexBinary">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="tns:contentType"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:attribute name="contentType" type="xs:string"/>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://efaturatest.izibiz.com.tr:443/Reconciliation</con:endpoint></con:endpoints><con:operation id="7c9925dd-0dea-4822-a096-d51ccb13365f" isOneWay="false" action="" name="GetReconciliationStatus" bindingOperationName="GetReconciliationStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1ea46814-3a6d-4f44-8d33-082ec2526d2b" name="Mutabakat Durum Sorgulama"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://efaturatest.izibiz.com.tr:443/Reconciliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rec="http://schemas.izibiz.com/ei/wsdl/reconciliation">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rec:GetReconciliationStatusRequest>
+         <REQUEST_HEADER>
+            <SESSION_ID>6db9ba42-f810-4724-9055-fbe965b7f2d6</SESSION_ID>
+            <APPLICATION_NAME>IZIBIZ SOAPUI</APPLICATION_NAME>
+         </REQUEST_HEADER>
+         <RECONCILIATION_SEARCHING>
+            <UUID>5e5bea0c-4604-4c54-978c-a5b52bf0a52b</UUID>
+         </RECONCILIATION_SEARCHING>
+      </rec:GetReconciliationStatusRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.izibiz.com/ei/wsdl/reconciliation/ReconciliationPort/GetReconciliationStatusRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="32ffe59c-70bb-437f-bb0c-b42d6abafbae" isOneWay="false" action="" name="SendMailReconciliation" bindingOperationName="SendMailReconciliation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="62cad91c-f00a-4d34-b3e1-4321fad413e4" name="Mutabakatı Tekrar E-Posta Gönder"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://efaturatest.izibiz.com.tr:443/Reconciliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rec="http://schemas.izibiz.com/ei/wsdl/reconciliation">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rec:SendMailReconciliationRequest>
+         <REQUEST_HEADER>
+            <SESSION_ID>6db9ba42-f810-4724-9055-fbe965b7f2d6</SESSION_ID>
+            <APPLICATION_NAME>IZIBIZ SOAPUI</APPLICATION_NAME>
+         </REQUEST_HEADER>
+         <MAIL_SEARCHING>
+            <UUID>5e5bea0c-4604-4c54-978c-a5b52bf0a52b</UUID>
+         </MAIL_SEARCHING>
+      </rec:SendMailReconciliationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.izibiz.com/ei/wsdl/reconciliation/ReconciliationPort/SendMailReconciliationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a0c966a5-2cbe-4b23-955b-7f7587c7046f" isOneWay="false" action="" name="SendReconciliation" bindingOperationName="SendReconciliation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="afbe831a-d3e1-4403-ae6c-1846141446f5" name="Mutabakat Gönderme - BA/BS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://efaturatest.izibiz.com.tr:443/Reconciliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rec="http://schemas.izibiz.com/ei/wsdl/reconciliation">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rec:SendReconciliationRequest>
+         <REQUEST_HEADER>
+            <SESSION_ID>18f6198c-1b24-44f4-9365-31acef616f2f</SESSION_ID>
+            <APPLICATION_NAME>IZIBIZ SOAPUI</APPLICATION_NAME>
+         </REQUEST_HEADER>
+         <RECONCILIATION>
+           <!--Birden fazla mutabakat göndermek için RECONCILIATION elamanı çoklanır -->
+            <TYPE>EM</TYPE> <!-- EM:BA/BS, CM:Cari -->
+            <UUID>2e5bea0c-4604-4c54-978c-a5b52bf0a52b</UUID>
+            <CUSTOMER_IDENTIFIER>4840847210</CUSTOMER_IDENTIFIER>
+            <COMMERCIAL_NAME>ACME BİLİŞİM TEKNOLOJİLERİ A.Ş.</COMMERCIAL_NAME>
+            <TAX_OFFICE>BÜYÜK MÜKELLEFLER VERGİ DAİRESİ</TAX_OFFICE>
+            <CUSTOMER_ADDRESS>CUMHURİYET MAH. MİLLET SOK. NO 19</CUSTOMER_ADDRESS>
+            <TELEPHONE_NO>0 (212) 212 12 12</TELEPHONE_NO>
+            <FAX_NO>0 (212) 212 21 21</FAX_NO>
+            <EMAIL>eposta@eposta.com.tr</EMAIL>
+            <CURRENCY_CODE>USD</CURRENCY_CODE>
+            <BABS_ACCOUNTING_PERIOD>201909</BABS_ACCOUNTING_PERIOD>
+            <BA_DOCUMENT_COUNT>5</BA_DOCUMENT_COUNT>
+            <BA_DOCUMENT_AMOUNT>55000</BA_DOCUMENT_AMOUNT>
+            <BS_DOCUMENT_COUNT>2</BS_DOCUMENT_COUNT>
+            <BS_DOCUMENT_AMOUNT>10000</BS_DOCUMENT_AMOUNT>
+            <NOTE>2019 AĞUSTOS AYI MUTABAKATI</NOTE>
+         </RECONCILIATION>
+      </rec:SendReconciliationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.izibiz.com/ei/wsdl/reconciliation/ReconciliationPort/SendReconciliationRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="927ab5a6-5640-4be5-8d4b-a2c196e10b7d" name="Mutabakat Gönderme - Cari"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://efaturatest.izibiz.com.tr:443/Reconciliation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rec="http://schemas.izibiz.com/ei/wsdl/reconciliation">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rec:SendReconciliationRequest>
+         <REQUEST_HEADER>
+            <SESSION_ID>6db9ba42-f810-4724-9055-fbe965b7f2d6</SESSION_ID>
+            <APPLICATION_NAME>IZIBIZ SOAPUI</APPLICATION_NAME>
+         </REQUEST_HEADER>
+         <RECONCILIATION>
+           <!--Birden fazla mutabakat göndermek için RECONCILIATION elamanı çoklanır -->
+            <TYPE>CM</TYPE> <!-- EM:BA/BS, CM:Cari -->
+            <UUID>7e5bea0c-4604-4c54-978c-a5b52bf0a52b</UUID>
+            <CUSTOMER_IDENTIFIER>4840847215</CUSTOMER_IDENTIFIER>
+            <COMMERCIAL_NAME>ACME BİLİŞİM TEKNOLOJİLERİ A.Ş.</COMMERCIAL_NAME>
+            <TAX_OFFICE>BÜYÜK MÜKELLEFLER VERGİ DAİRESİ</TAX_OFFICE>
+            <CUSTOMER_ADDRESS>CUMHURİYET MAH. MİLLET SOK. NO 19</CUSTOMER_ADDRESS>
+            <TELEPHONE_NO>0 (212) 212 12 12</TELEPHONE_NO>
+            <FAX_NO>0 (212) 212 21 21</FAX_NO>
+            <EMAIL>eposta@eposta.com.tr</EMAIL>
+            <CURRENCY_CODE>TRY</CURRENCY_CODE>
+            <CM_DATE>2019-09-05</CM_DATE>
+            <CM_AMOUNT_TYPE>A</CM_AMOUNT_TYPE> <!-- A:Alacak, B:Borç -->
+            <CM_AMOUNT>500</CM_AMOUNT>
+            <NOTE>CARİ MUTABAKATI</NOTE>
+         </RECONCILIATION>
+      </rec:SendReconciliationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://schemas.izibiz.com/ei/wsdl/reconciliation/ReconciliationPort/SendReconciliationRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
